@@ -12,7 +12,6 @@
 ##                prefix.conflic.filelist
 ##                prefix.merge.ancestry
 ##                prefix.supporting_ratio.txt
-##                [prefix.contml.phy] [calibrate.P]
 ##################################################################################
 
 import argparse, sys
