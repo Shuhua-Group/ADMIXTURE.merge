@@ -161,6 +161,7 @@ def output_ancestry(path, K, ref_data, order, out):
 ##################################################################################
 #######################      calibrate & merge P file      #######################
 ##################################################################################
+'''
 def calibrate_merge_P_file(target_ancestry_file_list, merged_ancestry_data, K, out):
     with open(out+'.contml.phy','w') as fw:
         pass
@@ -200,6 +201,7 @@ def calibrate_merge_P_file(target_ancestry_file_list, merged_ancestry_data, K, o
         pdata.apply(lambda x: ' '.join(x),axis=1).to_csv(out+'.contml.phy',header=None,index=None,mode='a')
         with open(out+'.contml.phy','a') as fw:
             fw.write('\n')
+'''
 
 ##################################################################################
 #######################                 main               #######################
@@ -228,7 +230,7 @@ def main():
         fw.write('       --ref '+args.ref+'\n')
         fw.write('       --k '+str(args.k)+'\n')
         fw.write('       --order '+args.order+'\n')
-        fw.write('       --p '+args.p+'\n')
+        #fw.write('       --p '+args.p+'\n')
         fw.write('       --out '+args.out+'\n')
 
     ref_data = pandas.read_csv(args.ref,sep='\s+',header=None)
@@ -238,12 +240,14 @@ def main():
         pass
     ancmerge = output_ancestry(args.path, args.k, ref_data, args.order, args.out)
 
+    '''
     if args.p == 'T':
         anclist = pandas.read_csv(args.out+'.consensus.filelist',header=None)
         anclist = list(anclist[0])
         calibrate_merge_P_file(anclist, ancmerge, args.k, args.out)
     else:
         pass
+    '''
 
     print('Done.\nHave a Nice Day!')
 
