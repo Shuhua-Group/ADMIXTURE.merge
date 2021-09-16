@@ -53,7 +53,7 @@ $ python2 ancestry_file.merge.py \
 >
 > **--k** (required): number of ancestral group
 >
-> **--order** (optional): population oder list (same as that for AncestryPainter.pl)
+> **--order** (optional): population oder list, one population name for each line (same as that for AncestryPainter.pl)
 >
 > **--out** (optional): output prefix, **default:** ./out
 
