@@ -3,18 +3,16 @@
 ##################################################################################
 ## Description: calibrate and merge ancestry components in acnestry files
 ##                sort ancestry components and estimate supporting ratio
-##                calibrate and merge P files for contml function in phylip
+##                #calibrate and merge P files for contml function in phylip
 ##################################################################################
 ## Usage:        python2.7 ancestry_file.merge.py -h
 ##################################################################################
-## Output:         prefix.logfile
+## Output:        prefix.logfile
 ##                prefix.consensus.filelist
 ##                prefix.conflic.filelist
 ##                prefix.merge.ancestry
 ##                prefix.supporting_ratio.txt
 ##                [prefix.contml.phy] [calibrate.P]
-##################################################################################
-## By: Pan Yuwen, 04/2019
 ##################################################################################
 
 import argparse, sys
